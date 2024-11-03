@@ -1,0 +1,11 @@
+.section{
+    background-color: white;
+    border-radius: 8px;
+
+    & > div:first-of-type{
+        border-bottom: 1px solid #ccc;
+    }
+    & > *{
+        padding: 16px;
+    }
+}
