@@ -1,11 +1,12 @@
 import ProductProvider from "../../providers/context/ProductContext";
 import ProductGrid from "../products/ProductGrid";
 import Section from "./Section";
+import styles from "./styles/section.module.css"
 
 
 export default function Main() {
     const headerActionElement = (
-        <div>sag teref</div>
+        <div className={styles.viewProduct}><button>View More</button></div>
     )
     return (
         <ProductProvider>
