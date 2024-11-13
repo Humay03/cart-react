@@ -2,17 +2,19 @@ import { Heart, ShoppingBag, Star } from "lucide-react";
 import Flex from "../shared/Flex";
 import styles from "./product.module.css";
 import { useNavigate } from "react-router-dom";
+import {useCartState} from "../../providers/context/CartContext"
 
 
 export default function ProductItem({ book }) {
-    const navigate =useNavigate();
+    const navigate = useNavigate();
+    const { add } = useCartState();
 
     return (
         <Flex as="article" className={styles.productItem}>
             <div className={styles.productImage}>
                 <img src={book.image} alt="" />
                 <div className={styles.productHover}>
-                  <button onClick={() => navigate(`/books/${book.id}`)}>Wiev Book</button>
+                    <button onClick={() => navigate(`/books/${book.id}`)}>Wiev Book</button>
                 </div>
             </div>
             <div>
@@ -30,7 +32,7 @@ export default function ProductItem({ book }) {
                     <span>${book.discount_price}</span>
                 </div>
                 <div>
-                    <button><ShoppingBag size={16} strokeWidth={1.25} /></button>
+                    <button onClick={() => add(book)}><ShoppingBag size={16} strokeWidth={1.25} /></button>
                     <button><Heart size={16} strokeWidth={1.25} /></button>
                 </div>
             </div>

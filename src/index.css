@@ -16,3 +16,7 @@ img {
   vertical-align: middle;
   object-fit: cover;
 }
+
+button{
+  cursor: pointer !important;
+}

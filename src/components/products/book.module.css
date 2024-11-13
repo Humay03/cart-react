@@ -1,0 +1,130 @@
+.aboutBook {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.Book {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    
+
+    &>div {
+        flex: 1;
+
+        &>img {
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        &>h5 {
+            font-size: 24px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .price {
+            display: flex;
+            gap: 10px;
+            font-size: 20px;
+            color: #555;
+
+            .discount-price {
+                font-size: 24px;
+                font-weight: bold;
+                color: #e74c3c;
+              
+            }
+        }
+
+        .stars {
+            display: flex;
+            gap: 5px;
+            color: #f39c12;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .wishlist {
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+
+            h6 {
+                font-size: 20px;
+                font-weight: 300;
+                color: #e74c3c;
+                
+            }
+        }
+
+        .share {
+            margin-top: 20px;
+
+            h5 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            svg {
+                margin-right: 10px;
+                cursor: pointer;
+
+            }
+        }
+
+        .authorName {
+            padding-bottom: 24px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #777;
+        }
+
+        button {
+            background-color: #0dd6b8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+   
+        button:nth-of-type(2) {
+            background-color: transparent;
+            border: 1px solid #0dd6b8;
+            color: #0dd6b8;
+    
+        }
+
+        button:hover {
+            background-color: #0ba69b;
+        }
+
+        button:nth-of-type(2):hover {
+            background-color: #0dd6b8;
+            color: white;
+        }
+
+    }
+}
+
+.stars svg {
+    color: #f39c12;
+}

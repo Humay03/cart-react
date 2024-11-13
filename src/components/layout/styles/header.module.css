@@ -26,15 +26,57 @@
 
    &>div {
       &>ul {
+         display: flex;
+         align-items: center;
+
          &>li {
+            &>span {
+               border: 1px solid black;
+               padding: 3px;
+            }
+
             &>button {
                all: unset;
             }
+
          }
+
+
       }
    }
 }
 
 input {
    all: unset;
+}
+
+.cartDropdownContent {
+   width: 200px;
+   max-height: 200px;
+   overflow-y: auto;
+   padding-right: 10px;
+   align-items: stretch;
+
+   .products {
+      padding: 10px 16px 0px;
+      column-gap: 10px;
+
+      &>div {
+         width: 50px;
+
+         &:first-of-type {
+            &>img {
+               width: 100%;
+               border-radius: 3px;
+            }
+         }
+
+         &>span {
+            display: inline-block;
+            justify-content: center;
+
+         }
+      }
+
+   }
 }
