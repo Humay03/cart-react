@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    height: calc(100vh - 60px);
 
 
     .bookBox {
@@ -36,5 +36,20 @@
                 background-color: #ccc;
             }
         }
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+
+    .layout {
+        border-right: 1px solid #ccc;
+
+        .adminPanel {}
+    }
+
+    .main {
+        columns: 1;
     }
 }

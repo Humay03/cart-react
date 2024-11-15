@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react";
 
 const ProductContext = createContext(null);
 
@@ -11,15 +11,15 @@ export default function ProductProvider({ children }) {
     const [books, setBooks] = useState([]);
 
     const getProducts = async () => {
-        const request = await fetch('/src/data/book.json');
+        const request = await fetch('http://localhost:4000/Books');
         return await request.json();
     }
 
-    useEffect(() => {
-        getProducts().then(data => setBooks(data))
-    }, []);
+   useEffect(() =>{
+    getProducts().then(data => setBooks(data))
+   }, []);
 
-    if(!books.length) return <div>Loading...</div>
+    if (!books.length) return <div>Loading...</div>
     return (
         <ProductContext.Provider value={{
             books,

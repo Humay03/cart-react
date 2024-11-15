@@ -4,6 +4,7 @@ import ProductProvider from "./providers/context/ProductContext";
 import ProductDashbord from "./components/products/ProductDashbord";
 import Book from "./components/products/Book";
 import AdminDashboard from "./page/admin/AdminDashboard";
+import AdminLayout from "./page/admin/AdminLayout";
 
 export default function App() {
 
@@ -13,7 +14,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<ProductDashbord />} />
           <Route path="books/:id" element={<Book />} />
-          <Route path="/admin" element={<Outlet />}>
+          <Route path="admin" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
           </Route>
         </Route>
