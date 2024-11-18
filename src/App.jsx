@@ -5,6 +5,8 @@ import ProductDashbord from "./components/products/ProductDashbord";
 import Book from "./components/products/Book";
 import AdminDashboard from "./page/admin/AdminDashboard";
 import AdminLayout from "./page/admin/AdminLayout";
+import AdminAddBook from "./page/admin-add-book/AdminAddBook";
+import AdminBookList from "./page/admin/AdminBookList";
 
 export default function App() {
 
@@ -16,6 +18,8 @@ export default function App() {
           <Route path="books/:id" element={<Book />} />
           <Route path="admin" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
+            <Route path="add" element={<AdminAddBook />} />
+            <Route path="addsecond" element={<AdminBookList />} />
           </Route>
         </Route>
       </Routes>

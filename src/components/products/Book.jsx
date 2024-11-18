@@ -9,7 +9,8 @@ export default function Book() {
     const { books } = useProducts();
     const { add } = useCartState();
     const { id } = useParams();
-    const book = books.find((item) => item.id === Number(id));
+    const book = books.find((item) => item.id === id);
+
     return (
         <div className={styles.aboutBook}>
             {book ? (
