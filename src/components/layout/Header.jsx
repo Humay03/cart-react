@@ -19,8 +19,8 @@ export default function Header() {
                 <input type="search" name="" id="" placeholder="Search..." />
             </div>
             <div>
-                <ul>
-                    <Flex as="ul" style={{cloumnGap:12}}>
+                <ul className=" flex items-center">
+                    <Flex as="ul" style={{ cloumnGap: 12 }}>
                         <li>
                             <Link to="/admin">Admin</Link>
                         </li>

@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 
 const ProductContext = createContext(null);
@@ -15,14 +16,24 @@ export default function ProductProvider({ children }) {
         return await request.json();
     }
 
-   useEffect(() =>{
-    getProducts().then(data => setBooks(data))
-   }, []);
+    useEffect(() => {
+        getProducts().then(data => setBooks(data))
+    }, []);
+
+    const deleteBook = async (id, cb) => {
+        if (!id) return "ID is required";
+        const result = await axios.delete(`http://localhost:4000/Books/${id}`);
+
+        if (result.status === 200) {
+            cb?.();
+        }
+    }
 
     if (!books.length) return <div>Loading...</div>
     return (
         <ProductContext.Provider value={{
             books,
+            remove: deleteBook,
         }}>
             {children}
         </ProductContext.Provider>

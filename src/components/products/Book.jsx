@@ -24,7 +24,7 @@ export default function Book() {
                             <span>${book.price}</span>
                             <span className={styles.discount_price}>${book.discount_price}</span>
                         </div>
-                        <div className={styles.stars}>
+                        <div className={`${styles.stars} flex items-center`}>
                             <Star size={16} strokeWidth={3} />
                             <Star size={16} strokeWidth={3} />
                             <Star size={16} strokeWidth={3} />
@@ -47,11 +47,13 @@ export default function Book() {
                             <Heart size={16} /><h6>Add to Wishlist</h6>
                         </div>
                         <div className={styles.share}>
-                            <h5>Share:</h5> <Facebook size={16} strokeWidth={1.5} />
-                            <Twitter size={16} strokeWidth={1.5} />
-                            <Youtube size={16} strokeWidth={1.5} />
-                            <Linkedin size={16} strokeWidth={1.5} />
-
+                            <h5>Share:</h5>
+                            <div className="flex items-center">
+                                <Facebook size={16} strokeWidth={1.5} />
+                                <Twitter size={16} strokeWidth={1.5} />
+                                <Youtube size={16} strokeWidth={1.5} />
+                                <Linkedin size={16} strokeWidth={1.5} />
+                            </div>
                         </div>
                     </div>
                 </Flex>

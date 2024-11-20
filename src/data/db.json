@@ -95,22 +95,6 @@
       "price": 99,
       "discount_price": 89,
       "image": "https://templates.iqonic.design/booksto-dist/html/assets/images/browse-books/12.jpg"
-    },
-    {
-      "id": "b67d",
-      "author": "Humay Ahmadova",
-      "title": "Guzguler Kiralligini Son Taci",
-      "genre": "Fantastic",
-      "price": "30",
-      "image": "https://img.stablecog.com/insecure/1536w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vNTYxYzNiYTktYjNmYi00ODliLWIyOTUtOTkyYjc1NTE5ZGFmLmpwZWc.webp"
-    },
-    {
-      "id": "834c",
-      "author": "Humay Ahmadova",
-      "name": "Guzguler Kiralligini Son Taci",
-      "genre": "Fantastic",
-      "price": "30",
-      "image": "https://img.stablecog.com/insecure/1536w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vNTYxYzNiYTktYjNmYi00ODliLWIyOTUtOTkyYjc1NTE5ZGFmLmpwZWc.webp"
     }
   ]
 }

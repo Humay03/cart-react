@@ -2,7 +2,7 @@ import { Heart, ShoppingBag, Star } from "lucide-react";
 import Flex from "../shared/Flex";
 import styles from "./product.module.css";
 import { useNavigate } from "react-router-dom";
-import {useCartState} from "../../providers/context/CartContext"
+import { useCartState } from "../../providers/context/CartContext"
 
 
 export default function ProductItem({ book }) {
@@ -14,13 +14,13 @@ export default function ProductItem({ book }) {
             <div className={styles.productImage}>
                 <img src={book.image} alt="" />
                 <div className={styles.productHover}>
-                    <button onClick={() => navigate(`/books/${book.id}`)}>Wiev Book</button>
+                    <button onClick={() => navigate(`/books/${book.id}`)}>View Book</button>
                 </div>
             </div>
             <div>
                 <h5>{book.name}</h5>
                 <p>{book.author}</p>
-                <div>
+                <div className="flex items-center text-amber-400">
                     <Star size={16} strokeWidth={3} />
                     <Star size={16} strokeWidth={3} />
                     <Star size={16} strokeWidth={3} />

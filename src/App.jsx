@@ -7,6 +7,8 @@ import AdminDashboard from "./page/admin/AdminDashboard";
 import AdminLayout from "./page/admin/AdminLayout";
 import AdminAddBook from "./page/admin-add-book/AdminAddBook";
 import AdminBookList from "./page/admin/AdminBookList";
+import Login from "./page/auth/Login";
+import Register from "./page/auth/Register";
 
 export default function App() {
 
@@ -22,6 +24,8 @@ export default function App() {
             <Route path="addsecond" element={<AdminBookList />} />
           </Route>
         </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </ProductProvider >
 
